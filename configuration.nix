@@ -73,6 +73,8 @@
   environment.systemPackages = with pkgs; [
     (import ./vim.nix)
     gparted
+    vscode
+    dconf-editor
     spotify
     lsd
     winetricks
@@ -197,6 +199,9 @@
   };
   programs.thunar.enable = true;
   services.tumbler.enable = true;
+
+  # printer enabler
+  services.printing.enable = true;
 
 
   # Some programs need SUID wrappers, can be configured further or are
